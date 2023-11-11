@@ -29,12 +29,12 @@ def generate_chart_1():
     for i, treatment_function in enumerate(treatment_functions):
         p.line(df.columns[1:], data.iloc[i, :], line_color=color_palette[i], legend_label=treatment_function, line_width=2)
 
-    # Add legend outside of the chart with fixed width
+    # Add legend outside of the chart with fixed label width
     p.legend.title = "Treatment Function"
     p.legend.label_text_font_size = "10pt"
     p.legend.orientation = "horizontal"  # Horizontal orientation
     p.legend.location = "bottom_center"  # Place below the chart
     p.legend.spacing = 15  # Adjust the spacing between the chart and the legend
-    p.legend.width = 800  # Fixed width for the legend
+    p.legend.label_width = 100  # Fixed label width for the legend
 
     return p
