@@ -4,7 +4,7 @@ from charts import generate_chart_1  # Import the modular chart function from ch
 from bokeh.layouts import gridplot
 
 # Function to create empty placeholder charts
-def create_random_bar_chart():
+def create_placeholder_chart():
     categories = ['A', 'B', 'C', 'D', 'E']
     data = np.random.randint(1, 100, size=5)
     source = ColumnDataSource(data=dict(categories=categories, data=data))
