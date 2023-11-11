@@ -16,7 +16,7 @@ def generate_chart_1():
     data = df.loc[df['Treatment Function'] != 'Total', :].iloc[:, 1:]
 
     # Create a Bokeh figure
-    p = figure(x_range=list(df.columns[1:]), plot_height=400, title="Number of Patients Over Time by Treatment Function", x_axis_label="Month", y_axis_label="Number of Patients")
+    p = figure(x_range=list(df.columns[1:]), plot_height=400, title="UHSx 65ww by Treatment Function Time Series", x_axis_label="Month", y_axis_label="Number of Patients")
 
     # Prepare the data for plotting
     source = ColumnDataSource(data)
