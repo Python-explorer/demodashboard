@@ -34,4 +34,5 @@ def generate_chart_1():
     p.legend.label_text_font_size = "10pt"
     p.legend.location = "bottom_center"
     p.legend.click_policy = "hide"
+    p.add_layout(legend, 'right')
     return p
