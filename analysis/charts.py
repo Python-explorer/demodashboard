@@ -32,3 +32,4 @@ def generate_chart_1():
         p.add_layout(legend, 'below')
 
     return p
+    # Test
