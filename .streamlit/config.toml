@@ -8,7 +8,7 @@ primaryColor="#ffffff"
 secondaryBackgroundColor="#1e3f5c"
 
 # Color used for almost all text
-textColor="#ffffff"
+textColor="#000000"
 
 # Color used for all text in the header area, including the streamlit logo text
 headerTextColor="#000000"
