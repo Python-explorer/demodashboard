@@ -3,6 +3,7 @@ import numpy as np
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
 import pandas as pd
+from bokeh.layouts import column
 
 def generate_chart_1():
     # Load the UHS65.csv file into a DataFrame
@@ -33,7 +34,8 @@ def generate_chart_1():
     p.legend.title = "Treatment Function"
     p.legend.label_text_font_size = "10pt"
     p.legend.orientation = "horizontal"  # Horizontal orientation
-    p.legend.location = "top_center"  # Place below the chart
-    p.legend.spacing = 15  # Adjust the spacing between the chart and the legend
+
+# Create a layout with the chart and legend below it
+    layout = column(p)
   
     return p
