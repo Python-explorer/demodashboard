@@ -5,7 +5,7 @@ from bokeh.models import ColumnDataSource
 
 def generate_chart_1():
     # Load the UHS65.csv file into a DataFrame
-df = pd.read_csv('DataFiles/UHS65.csv')
+df = pd.read_csv('UHS65.csv')
 
 # Extract treatment function names (excluding 'Total')
 treatment_functions = df['Treatment Function'].loc[df['Treatment Function'] != 'Total']
