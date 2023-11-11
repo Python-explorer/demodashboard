@@ -1,4 +1,3 @@
-# File: charts.py
 import numpy as np
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
@@ -30,12 +29,12 @@ def generate_chart_1():
     for i, treatment_function in enumerate(treatment_functions):
         p.line(df.columns[1:], data.iloc[i, :], line_color=color_palette[i], legend_label=treatment_function, line_width=2)
 
-    # Add legend
+    # Add legend outside of the chart with fixed width
     p.legend.title = "Treatment Function"
     p.legend.label_text_font_size = "10pt"
     p.legend.orientation = "horizontal"  # Horizontal orientation
+    p.legend.location = "bottom_center"  # Place below the chart
+    p.legend.spacing = 15  # Adjust the spacing between the chart and the legend
+    p.legend.width = 800  # Fixed width for the legend
 
-# Create a layout with the chart and legend below it
-    layout = column(p)
-  
     return p
