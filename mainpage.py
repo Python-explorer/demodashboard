@@ -24,10 +24,14 @@ st.sidebar.title('Demo Assurance Dashboard')
 options = ['Headline Charts', 'Planned care', 'Urgent care', 'Mental health', 'General practice', 'Primary and community', 'Inequality', 'Risk', 'Insight']
 selection = st.sidebar.radio("Choose a category", options)
 
-# Show the main page with Bokeh bar charts if 'Headline Charts' is selected
+# Main page content
 if selection == 'Headline Charts':
-    st.header('Headline Charts')
+    # Use markdown to create a large black text at the top of the page
+    st.markdown("<h1 style='color: black;'>Headline Charts</h1>", unsafe_allow_html=True)
     charts = [create_bar_chart() for _ in range(6)]
     # Arrange the charts in two columns and three rows
     grid = gridplot(charts, ncols=2, sizing_mode='scale_width')
     st.bokeh_chart(grid)
+else:
+    # For other selections, you can add appropriate content here
+    st.write(f"You selected: {selection}")
