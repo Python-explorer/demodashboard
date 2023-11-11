@@ -16,8 +16,8 @@ def create_bar_chart():
     p.y_range.start = 0
     return p
 
-# Set the page config to wide mode with a dark theme
-st.set_page_config(layout="wide", page_title="Demo Assurance Dashboard", theme="dark")
+# Set the page config to wide mode
+st.set_page_config(layout="wide", page_title="Demo Assurance Dashboard")
 
 # Create the sidebar with radio buttons
 st.sidebar.title('Demo Assurance Dashboard')
@@ -31,5 +31,3 @@ if selection == 'Headline Charts':
     # Arrange the charts in two columns and three rows
     grid = gridplot(charts, ncols=2, sizing_mode='scale_width')
     st.bokeh_chart(grid)
-
-# To run this Streamlit app, save the code in a file (e.g., app.py) and run the command `streamlit run app.py`.
