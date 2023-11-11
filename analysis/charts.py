@@ -2,6 +2,7 @@
 import numpy as np
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource
+import pandas as pd
 
 def generate_chart_1():
     # Load the UHS65.csv file into a DataFrame
