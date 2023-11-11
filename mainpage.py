@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 from bokeh.plotting import figure  # Make sure this import is included
-from analysis.charts import generate_chart_1  # Import the modular chart function from charts.py
+from analysis.charts import generate_chart_1
 from bokeh.layouts import gridplot
 from bokeh.models import ColumnDataSource
 
