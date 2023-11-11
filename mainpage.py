@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 from bokeh.plotting import figure  # Make sure this import is included
 from charts import generate_chart_1  # Import the modular chart function from charts.py
 from bokeh.layouts import gridplot
