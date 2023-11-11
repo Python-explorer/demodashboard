@@ -3,7 +3,7 @@ import numpy as np
 from bokeh.plotting import figure  # Make sure this import is included
 from bokeh.layouts import gridplot
 from bokeh.models import ColumnDataSource
-from charts import generate_chart_1
+from analysis.charts import generate_chart_1
 
 # Function to create empty placeholder charts
 def create_placeholder_chart():
