@@ -11,4 +11,4 @@ secondaryBackgroundColor="#1e3f5c"
 textColor="#ffffff"
 
 # Color used for all text in the header area, including the streamlit logo text
-headerTextColor="#ffffff"
+headerTextColor="#000000"
