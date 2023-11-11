@@ -1,19 +1,11 @@
 import streamlit as st
-import numpy as np
-from bokeh.plotting import figure
-from bokeh.models import ColumnDataSource
+from charts import generate_chart_1  # Import the modular chart function from charts.py
 from bokeh.layouts import gridplot
 
-# Function to create a Bokeh bar chart with random data
-def create_bar_chart():
-    categories = ['A', 'B', 'C', 'D', 'E']
-    data = np.random.randint(1, 100, size=5)
-    source = ColumnDataSource(data=dict(categories=categories, data=data))
-    p = figure(x_range=categories, height=250, title="Sample Bar Chart",
-               toolbar_location=None, tools="")
-    p.vbar(x='categories', top='data', width=0.9, source=source)
-    p.xgrid.grid_line_color = None
-    p.y_range.start = 0
+# Function to create empty placeholder charts
+def create_placeholder_chart():
+    p = figure(height=250, width=250, title="Placeholder Chart")
+    p.outline_line_color = None
     return p
 
 # Set the page config to wide mode
@@ -26,11 +18,19 @@ selection = st.sidebar.radio("Choose a category", options)
 
 # Main page content
 if selection == 'Headline Charts':
-    # Use markdown to create a large black text at the top of the page
     st.markdown("<h1 style='color: black;'>Headline Charts</h1>", unsafe_allow_html=True)
-    charts = [create_bar_chart() for _ in range(6)]
+
+    # Use the imported function to create the first chart
+    first_chart = generate_chart_1()
+
+    # Generate placeholder charts for the rest of the grid
+    placeholder_charts = [create_placeholder_chart() for _ in range(5)]
+    
+    # Combine the first chart with the placeholders into a single list
+    all_charts = [first_chart] + placeholder_charts
+
     # Arrange the charts in two columns and three rows
-    grid = gridplot(charts, ncols=2, sizing_mode='scale_width')
+    grid = gridplot(all_charts, ncols=2, sizing_mode='scale_width')
     st.bokeh_chart(grid)
 else:
     # For other selections, you can add appropriate content here
