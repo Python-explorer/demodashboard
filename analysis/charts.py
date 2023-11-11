@@ -32,7 +32,7 @@ def generate_chart_1():
     # Add legend
     p.legend.title = "Treatment Function"
     p.legend.label_text_font_size = "10pt"
-    p.legend.location = "bottom_center"
-    p.legend.click_policy = "hide"
+    p.legend.orientation = "horizontal"  # Horizontal orientation
+    p.legend.spacing = 15  # Adjust the spacing between the chart and the legend
   
     return p
