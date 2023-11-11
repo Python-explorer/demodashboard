@@ -4,8 +4,15 @@ from charts import generate_chart_1  # Import the modular chart function from ch
 from bokeh.layouts import gridplot
 
 # Function to create empty placeholder charts
-def create_placeholder_chart():
-    p = figure(height=250, width=250, title="Placeholder Chart")
+def create_random_bar_chart():
+    categories = ['A', 'B', 'C', 'D', 'E']
+    data = np.random.randint(1, 100, size=5)
+    source = ColumnDataSource(data=dict(categories=categories, data=data))
+    p = figure(x_range=categories, height=250, width=250, title="Random Bar Chart",
+               toolbar_location=None, tools="")
+    p.vbar(x='categories', top='data', width=0.9, source=source, color="navy")
+    p.xgrid.grid_line_color = None
+    p.ygrid.grid_line_color = None
     p.outline_line_color = None
     return p
 
