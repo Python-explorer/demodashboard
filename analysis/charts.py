@@ -32,6 +32,6 @@ def generate_chart_1():
     # Add legend
     p.legend.title = "Treatment Function"
     p.legend.label_text_font_size = "10pt"
-    p.legend.location = "top_center"
+    p.legend.location = "bottom_center"
     p.legend.click_policy = "hide"
     return p
