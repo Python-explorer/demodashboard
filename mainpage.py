@@ -3,6 +3,7 @@ import numpy as np
 from bokeh.plotting import figure  # Make sure this import is included
 from charts import generate_chart_1  # Import the modular chart function from charts.py
 from bokeh.layouts import gridplot
+from bokeh.models import ColumnDataSource
 
 # Function to create empty placeholder charts
 def create_placeholder_chart():
