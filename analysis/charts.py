@@ -33,6 +33,8 @@ def generate_chart_1():
     p.legend.title = "Treatment Function"
     p.legend.label_text_font_size = "10pt"
     p.legend.orientation = "horizontal"  # Horizontal orientation
-    p.legend.spacing = 15  # Adjust the spacing between the chart and the legend
+
+    # Create a layout with the chart and legend below it
+    layout = column(p)
   
     return p
