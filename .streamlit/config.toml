@@ -2,8 +2,7 @@
 # Primary colors
 primaryColor="#ffffff"
 
-# Background colors for the main content area
-backgroundColor="#262730"
+
 
 # Background color for the sidebar and most interactive widgets
 secondaryBackgroundColor="#1e3f5c"
