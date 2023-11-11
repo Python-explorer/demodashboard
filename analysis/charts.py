@@ -1,6 +1,6 @@
 import numpy as np
 from bokeh.plotting import figure
-from bokeh.models import ColumnDataSource
+from bokeh.models import ColumnDataSource, Legend
 import pandas as pd
 from bokeh.layouts import column
 
@@ -27,14 +27,8 @@ def generate_chart_1():
 
     # Plot a line for each treatment function
     for i, treatment_function in enumerate(treatment_functions):
-        p.line(df.columns[1:], data.iloc[i, :], line_color=color_palette[i], legend_label=treatment_function, line_width=2)
-
-    # Add legend outside of the chart with fixed label width
-    p.legend.title = "Treatment Function"
-    p.legend.label_text_font_size = "10pt"
-    p.legend.orientation = "horizontal"  # Horizontal orientation
-    p.legend.location = "bottom_center"  # Place below the chart
-    p.legend.spacing = 15  # Adjust the spacing between the chart and the legend
-    p.legend.label_width = 100  # Fixed label width for the legend
+        line = p.line(df.columns[1:], data.iloc[i, :], line_color=color_palette[i], line_width=2)
+        legend = Legend(items=[(treatment_function, [line])], title="Treatment Function")
+        p.add_layout(legend, 'below')
 
     return p
