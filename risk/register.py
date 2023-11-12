@@ -8,5 +8,8 @@ def show_risk():
         df = pd.read_csv(url)
         # Display the DataFrame as a table in Streamlit
         st.write(df)
-# Correct indentation: This call should be outside and after the function definition
+    except Exception as e:
+        st.error(f"An error occurred while reading the file: {e}")
+
+# This call should be at the top-level indentation, not inside any function or conditional block
 show_risk()
