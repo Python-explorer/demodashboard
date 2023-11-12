@@ -45,7 +45,6 @@ if selection == 'Headline Charts':
     st.bokeh_chart(grid)
 elif selection == "Risk"
     st.markdown ("<h1 style='color: black;'>Risk</h1>", unsafe_allow_html=True)
-
 else:
     # For other selections, you can add appropriate content here
     st.write(f"You selected: {selection}")
