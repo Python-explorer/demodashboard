@@ -8,5 +8,4 @@ def show_risk():
         # Read the CSV into a DataFrame, specifying the line terminator if necessary
         df = pd.read_csv(url)
         st.write(df)
-        
     show_risk()
