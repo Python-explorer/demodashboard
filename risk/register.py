@@ -2,14 +2,25 @@
 import streamlit as st
 import pandas as pd
 
+st.markdown("""
+    <style>
+    .reportview-container {
+        color: black; /* This changes the text color */
+    }
+    .dataframe th {
+        color: black; /* This changes dataframe header color */
+    }
+    .dataframe td {
+        color: black; /* This changes dataframe content text color */
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # Raw URL of the CSV file in the GitHub repository
 csv_url = 'https://raw.githubusercontent.com/Python-explorer/demodashboard/main/risk/Risk.csv'
 
 # Load the CSV file into a DataFrame and ensure proper data types, if necessary
 df = pd.read_csv(csv_url, dtype={"text_column1": str, "text_column2": str, "num_column1": float, "num_column2": float, "num_column3": float})
-
-# Display the word 'test' with black text color
-st.markdown("<span style='color: black;'>test</span>", unsafe_allow_html=True)
 
 # Display the DataFrame as a table in Streamlit to debug
 st.write("Displaying the first two rows of the DataFrame:")
