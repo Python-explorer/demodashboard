@@ -6,7 +6,6 @@ from bokeh.models import ColumnDataSource
 from risk.register import show_risk
 from analysis.charts import generate_chart_1
 
-
 # Function to create empty placeholder charts
 def create_placeholder_chart():
     categories = ['A', 'B', 'C', 'D', 'E']
@@ -19,7 +18,6 @@ def create_placeholder_chart():
     p.ygrid.grid_line_color = None
     p.outline_line_color = None
     return p
-
 
 # Set the page config to wide mode
 st.set_page_config(layout="wide", page_title="Demo Assurance Dashboard")
