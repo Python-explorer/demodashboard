@@ -2,19 +2,19 @@
 import streamlit as st
 import pandas as pd
 
-st.markdown("""
-    <style>
-    .reportview-container {
-        color: black; /* This changes the text color */
+st.set_page_config(
+    page_title="My Streamlit App",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    theme={
+        "base": "light",
+        "textColor": "#000000",
+        "primaryColor": "#f63366",
+        "backgroundColor": "#ffffff",
+        "secondaryBackgroundColor": "#f0f2f6",
     }
-    .dataframe th {
-        color: black; /* This changes dataframe header color */
-    }
-    .dataframe td {
-        color: black; /* This changes dataframe content text color */
-    }
-    </style>
-    """, unsafe_allow_html=True)
+)
+
 
 # Raw URL of the CSV file in the GitHub repository
 csv_url = 'https://raw.githubusercontent.com/Python-explorer/demodashboard/main/risk/Risk.csv'
