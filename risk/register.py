@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def display_csv_as_table():
-    csv_url = 'path_or_url_to_your_csv_file.csv'  # Ensure this is correct
+    csv_url = 'https://raw.githubusercontent.com/Python-explorer/demodashboard/main/risk/Risk.csv'  # Ensure this is correct
 
     try:
         df = pd.read_csv(csv_url)
