@@ -13,6 +13,6 @@ def show_risk():
     try:
         # Display the DataFrame as a table in Streamlit
         st.write(df)
-show()
+    show()
 
  
