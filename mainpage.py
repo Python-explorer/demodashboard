@@ -3,6 +3,7 @@ import numpy as np
 from bokeh.plotting import figure  # Make sure this import is included
 from bokeh.layouts import gridplot
 from bokeh.models import ColumnDataSource
+from risk.register import show_risk_content
 from analysis.charts import generate_chart_1
 
 
