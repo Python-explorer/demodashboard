@@ -5,4 +5,4 @@ def show_risk_content():
     st.markdown("## Risk Dashboard")
     st.write("Risk-related content displayed here.")
     # More Streamlit commands to display data, charts, etc.
-    return p
+ 
