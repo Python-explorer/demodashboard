@@ -16,9 +16,3 @@ def display_csv_as_table():
     except Exception as e:
         st.error(f"An error occurred while reading the file: {e}")
 
-def main():
-    st.title("CSV Viewer App")
-    display_csv_as_table()
-
-if __name__ == "__main__":
-    main()
