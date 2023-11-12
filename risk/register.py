@@ -7,7 +7,7 @@ def create_grid_with_test(rows, cols):
         table += "<tr>"
         for col in range(cols):
             if row == 0 and col == 0:  # First cell
-                table += "<td style='border:1px solid black; width: 50px; height: 50px;'>Test</td>"
+                table += "<td style='border:1px solid black; width: 50px; height: 50px; color: black;'>Test</td>"
             else:
                 table += "<td style='border:1px solid black; width: 50px; height: 50px;'></td>"
         table += "</tr>"
