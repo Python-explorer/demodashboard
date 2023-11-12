@@ -8,13 +8,6 @@ def show_risk():
     try:
         # Read the CSV into a DataFrame, specifying the line terminator if necessary
         df = pd.read_csv(url, lineterminator='\n')
-
-        # Display the first few rows of the DataFrame for debugging
-        st.write("First few rows of the DataFrame:")
-        st.write(df.head())
-
-        # Display the entire DataFrame as a table in Streamlit
-        st.write("Full DataFrame:")
         st.write(df)
 
     except Exception as e:
