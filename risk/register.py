@@ -8,8 +8,5 @@ def show_risk():
         # Read the CSV into a DataFrame, specifying the line terminator if necessary
         df = pd.read_csv(url)
         st.write(df)
-
-    except Exception as e:
-        st.error(f"An error occurred while reading the file: {e}")
-
-show_risk()
+        
+    show_risk()
