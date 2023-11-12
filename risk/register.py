@@ -11,7 +11,7 @@ csv_url = 'https://raw.githubusercontent.com/Python-explorer/demodashboard/main/
 # Load the CSV file into a DataFrame
 df = pd.read_csv(csv_url)
 
-st.write(df.head(2))
+st.write(df.head)
 
 # Display the DataFrame as a table in Streamlit
 st.table(df)
