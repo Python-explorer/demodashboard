@@ -45,7 +45,6 @@ if selection == 'Headline Charts':
     grid = gridplot(all_charts, ncols=2, sizing_mode='scale_width')
     st.bokeh_chart(grid)
 elif selection == "Risk":
-    st.markdown ("<h1 style='color: black;'>Risk</h1>", unsafe_allow_html=True)
     show_risk_content()
 else:
     # For other selections, you can add appropriate content here
