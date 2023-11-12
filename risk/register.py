@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd 
+import os
 
 def show_risk():
     st.markdown("<h1 style='color: black;'>Risk</h1>", unsafe_allow_html=True)
@@ -6,4 +8,10 @@ def show_risk():
     # Your code to display the risk content goes here
     st.write("Risk-related content displayed here.")
     # More Streamlit commands to display data, charts, etc.
+ try:
+        data = pd.read_csv(csv_file)
+
+        # Display the data as a table in Streamlit
+        st.write(data)
+
  
