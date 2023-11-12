@@ -2,5 +2,8 @@ import streamlit as st
 import pandas as pd
 
 def show_risk():
-# This call should be at the top-level indentation, not inside any function or conditional block
- 
+    # Using markdown to display a header
+    st.markdown("# Risk")
+
+# Call the function to display the header
+show_risk()
