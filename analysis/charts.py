@@ -14,8 +14,5 @@ def generate_chart_1():
     color_palette = ["#%06x" % np.random.randint(0, 0xFFFFFF) for _ in range(num_colors)]
     for i, treatment_function in enumerate(treatment_functions):
         p.line(df.columns[1:], data.iloc[i, :], line_color=color_palette[i], legend_label=treatment_function, line_width=2)
-    p.legend.title = "Treatment Function"
-    p.legend.label_text_font_size = "10pt"
-    p.legend.location = "top_left"
-    p.legend.click_policy = "hide"
+
     return p
