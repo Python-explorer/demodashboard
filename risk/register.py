@@ -8,7 +8,7 @@ def show_risk():
     # Your code to display the risk content goes here
     st.write("Risk-related content displayed here.")
     # More Streamlit commands to display data, charts, etc.
-    url = 'https://raw.githubusercontent.com/Python-explorer/demodashboard/main/analysis/UHS65.csv'
+    url = 'https://raw.githubusercontent.com/Python-explorer/demodashboard/main/risk/Risk.csv'
     try:
         df = pd.read_csv(url)
         # Display the DataFrame as a table in Streamlit
