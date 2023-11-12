@@ -1,18 +1,21 @@
 import streamlit as st
 
-# Function to create an HTML string for a blank 5x5 grid
-def create_blank_grid(rows, cols):
+# Function to create an HTML string for a 5x5 grid with 'test' in the first cell
+def create_grid_with_test(rows, cols):
     table = "<table>"
-    for _ in range(rows):
+    for row in range(rows):
         table += "<tr>"
-        for _ in range(cols):
-            table += "<td style='border:1px solid black; width: 50px; height: 50px;'></td>"
+        for col in range(cols):
+            if row == 0 and col == 0:  # First cell
+                table += "<td style='border:1px solid black; width: 50px; height: 50px;'>Test</td>"
+            else:
+                table += "<td style='border:1px solid black; width: 50px; height: 50px;'></td>"
         table += "</tr>"
     table += "</table>"
     return table
 
-# Create a 5x5 grid
-grid_html = create_blank_grid(5, 5)
+# Create a 5x5 grid with 'test' in the first cell
+grid_html = create_grid_with_test(5, 5)
 
 # Display the grid in Streamlit
 st.markdown(grid_html, unsafe_allow_html=True)
