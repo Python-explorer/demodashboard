@@ -3,7 +3,6 @@ import numpy as np
 from bokeh.plotting import figure  # Make sure this import is included
 from bokeh.layouts import gridplot
 from bokeh.models import ColumnDataSource
-from risk.register import show_risk
 from analysis.charts import generate_chart_1
 
 # Function to create empty placeholder charts
@@ -43,8 +42,6 @@ if selection == 'Headline Charts':
     # Arrange the charts in two columns and three rows
     grid = gridplot(all_charts, ncols=2, sizing_mode='scale_width')
     st.bokeh_chart(grid)
-elif selection == "Risk":
-    show_risk()
 else:
     # For other selections, you can add appropriate content here
     st.write(f"You selected: {selection}")
