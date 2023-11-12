@@ -9,10 +9,12 @@ def show_risk():
 
     url = 'https://raw.githubusercontent.com/Python-explorer/demodashboard/main/risk/Risk.csv'
     try:
-        # Attempt to read the CSV with some common debugging parameters
-        df = pd.read_csv(url, error_bad_lines=False, quotechar='"', escapechar='\\')
+        # Attempt to read the CSV with the updated parameter
+        df = pd.read_csv(url, on_bad_lines='skip')
         st.write(df)
     except Exception as e:
         st.error(f"An error occurred while reading the file: {e}")
+
+show_risk()
 
  
